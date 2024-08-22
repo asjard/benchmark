@@ -1,0 +1,13 @@
+swagger: "2.0"
+info:
+  title: ""
+  version: ""
+basePath: /
+paths:
+  /hello:
+    get:
+      operationId: Hello
+      consumes:
+      - '*/*'
+      produces:
+      - '*/*'

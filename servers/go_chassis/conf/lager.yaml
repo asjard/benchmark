@@ -1,0 +1,3 @@
+logWriters: stdout
+# logFile: /dev/stdout
+logLevel: INFO

@@ -1,0 +1,6 @@
+asjard:
+  servers:
+    rest:
+      enabled: true
+      addresses:
+        listen: 127.0.0.1:7030

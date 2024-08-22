@@ -1,0 +1,15 @@
+syntax = "v1"
+
+type Request {
+	Name string `json:"name,optional"`
+}
+
+type Response {
+	Message string `json:"message"`
+}
+
+service go_zero-api {
+	@handler Go_zeroHandler
+	get /hello (Request) returns (Response)
+}
+
