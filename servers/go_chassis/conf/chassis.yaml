@@ -10,3 +10,7 @@ servicecomb:
     chain:
       Provider:
         default: tracing-provider,bizkeeper-provider
+  metrics:
+    enable: false
+    enableGoRuntimeMetrics: false
+    enableCircuitMetrics: false

@@ -1,5 +1,5 @@
 ,default,beego,gin,echo,fasthttp,asjard,go_zero,go_chassis
-0 ms,,,,,,,,
-10 ms,,,,,,,,
-100 ms,,,,,,,,
-500 ms,,,,,,,,
+0 ms,6,5,4,5,3,9,13,10
+10 ms,6,5,4,6,3,4,7,6
+100 ms,4,4,4,4,3,5,4,5
+500 ms,3,4,4,3,3,3,4,5

@@ -28,7 +28,7 @@ var (
 	sleepTimeDuration time.Duration
 	message           = []byte("hello world")
 	messageStr        = "hello world"
-	samplingPoint     = 20 // seconds
+	samplingPoint     = 10 // seconds
 )
 
 // server [default] [10] [8080]
@@ -89,6 +89,8 @@ func main() {
 		err = go_zero.StartServer(options)
 	case "go_chassis":
 		err = go_chassis.StartServer(options)
+	// case "jupiter":
+	// 	err = jupiter.StartServer(options)
 	default:
 		fmt.Println("--------------------------------------------------------------------")
 		fmt.Println("------------- Unknown framework given!!! Check libs.sh -------------")

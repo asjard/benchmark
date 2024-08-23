@@ -5,12 +5,13 @@ go 1.21.6
 replace github.com/asjard/asjard => ../asjard
 
 require (
-	github.com/asjard/asjard v0.5.1-0.20240822065839-fae8d4a7d766
+	github.com/asjard/asjard v0.5.1-0.20240823033052-7c95968c3659
 	github.com/astaxie/beego v1.12.3
 	github.com/gin-gonic/gin v1.10.0
+	github.com/go-chassis/go-chassis/v2 v2.7.1
 	github.com/labstack/echo/v4 v4.12.0
 	github.com/valyala/fasthttp v1.55.0
-	github.com/zeromicro/go-zero v1.7.0
+	github.com/zeromicro/go-zero v1.6.6
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.2
 )
@@ -21,7 +22,7 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
-	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
+	github.com/cenkalti/backoff v2.2.1+incompatible // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect
@@ -36,7 +37,6 @@ require (
 	github.com/go-chassis/cari v0.7.1-0.20220815112157-2c62cc5ae1a3 // indirect
 	github.com/go-chassis/foundation v0.4.0 // indirect
 	github.com/go-chassis/go-archaius v1.5.1 // indirect
-	github.com/go-chassis/go-chassis/v2 v2.7.1 // indirect
 	github.com/go-chassis/go-restful-swagger20 v1.0.4-0.20220704025524-9243cbee26b7 // indirect
 	github.com/go-chassis/kie-client v0.0.0-20201210060018-938c7680a9ab // indirect
 	github.com/go-chassis/openlog v1.1.3 // indirect
@@ -59,7 +59,6 @@ require (
 	github.com/hashicorp/go-version v1.7.0 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/karlseguin/ccache/v2 v2.0.8 // indirect
 	github.com/klauspost/compress v1.17.9 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
@@ -71,7 +70,7 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
-	github.com/opentracing/opentracing-go v1.1.0 // indirect
+	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/openzipkin/zipkin-go v0.4.3 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
@@ -93,8 +92,8 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.28.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.28.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.28.0 // indirect
-	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.24.0 // indirect
-	go.opentelemetry.io/otel/exporters/zipkin v1.24.0 // indirect
+	go.opentelemetry.io/otel/exporters/stdout/stdouttrace v1.19.0 // indirect
+	go.opentelemetry.io/otel/exporters/zipkin v1.19.0 // indirect
 	go.opentelemetry.io/otel/metric v1.28.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.28.0 // indirect
 	go.opentelemetry.io/otel/trace v1.28.0 // indirect
