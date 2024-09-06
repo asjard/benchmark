@@ -1,2 +1,2 @@
-,default,asjard,beego,gin
-cpu-bound,417.46,85367.62,357.42,86312.75
+,default,beego,gin,echo,fasthttp,asjard,go_zero,go_chassis,kratos
+cpu-bound,330.16,1305.52,19.29,1237.46,811.40,780.56,981.88,1810.38,910.41

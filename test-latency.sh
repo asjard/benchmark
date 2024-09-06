@@ -10,12 +10,6 @@ test_result=()
 test_latency_result=()
 test_alloc_result=()
 
-###############
-cpu_cores=4
-# 不要小于10s
-test_duration=15s
-################
-
 test_web_framework()
 {
     index=$1
@@ -23,9 +17,8 @@ test_web_framework()
     sleepTime=$3
     concurrency=$4
   echo "testing web framework: $2 $3"
-  ./$server_bin_name $2 $3 > alloc.log 2>&1 &
-  sleep 3
-  ## 压测时间不得低于5秒
+  ./servers/bench_${framework}/$server_bin_name -s ${sleepTime}ms > alloc.log 2>&1 &
+  sleep 2
   wrk -t$cpu_cores -c$4 -d$test_duration http://127.0.0.1:7030/hello > tmp.log
   throughput=$(< "tmp.log" grep Requests/sec|awk '{print $2}')
   latency=$(< "tmp.log" grep Latency | awk '{print $2}')
@@ -69,19 +62,19 @@ pkill -9 $server_bin_name
 echo ","$(IFS=$','; echo "${web_frameworks[*]}" ) > processtime.csv
 echo ","$(IFS=$','; echo "${web_frameworks[*]}" ) > processtime_latency.csv
 echo ","$(IFS=$','; echo "${web_frameworks[*]}" ) > processtime_alloc.csv
-test_all 0 100
+test_all 0 1000
 echo "0 ms,"$(IFS=$','; echo "${test_result[*]}" ) >> processtime.csv
 echo "0 ms,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> processtime_latency.csv
 echo "0 ms,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> processtime_alloc.csv
-test_all 10 100
+test_all 10 1000
 echo "10 ms,"$(IFS=$','; echo "${test_result[*]}" ) >> processtime.csv
 echo "10 ms,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> processtime_latency.csv
 echo "10 ms,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> processtime_alloc.csv
-test_all 100 100
+test_all 100 1000
 echo "100 ms,"$(IFS=$','; echo "${test_result[*]}" ) >> processtime.csv
 echo "100 ms,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> processtime_latency.csv
 echo "100 ms,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> processtime_alloc.csv
-test_all 500 100
+test_all 500 1000
 echo "500 ms,"$(IFS=$','; echo "${test_result[*]}" ) >> processtime.csv
 echo "500 ms,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> processtime_latency.csv
 echo "500 ms,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> processtime_alloc.csv
