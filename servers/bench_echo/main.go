@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v5"
 )
 
 type Server struct {
@@ -28,7 +28,7 @@ func (s *Server) start() error {
 	return e.Start(s.options.Address)
 }
 
-func (s *Server) handler(c echo.Context) error {
+func (s *Server) handler(c *echo.Context) error {
 	if s.options.CpuBound {
 		Pow(s.options.Target)
 	} else {

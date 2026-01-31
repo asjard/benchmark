@@ -1,11 +1,11 @@
 module github.com/asjard/benchmark/servers/bench_fasthttp
 
-go 1.21.6
+go 1.24.0
 
-require github.com/valyala/fasthttp v1.55.0
+require github.com/valyala/fasthttp v1.69.0
 
 require (
-	github.com/andybalholm/brotli v1.1.0 // indirect
-	github.com/klauspost/compress v1.17.9 // indirect
+	github.com/andybalholm/brotli v1.2.0 // indirect
+	github.com/klauspost/compress v1.18.3 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 )

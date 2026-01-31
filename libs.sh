@@ -12,9 +12,9 @@ web_frameworks=("default" "beego" "gin" "echo" "fasthttp" "asjard" "go_zero" "go
 
 ROOTDIR=$(cd $(dirname $0);pwd)
 ###############
-cpu_cores=4
+cpu_cores=6
 # 不要小于5s
-test_duration=15s
+test_duration=20s
 ################
 
 # export ASJARD_CONF_DIR=${ROOTDIR}/servers/asjard/conf
