@@ -87,14 +87,14 @@ test_all 0 100
 echo "100,"$(IFS=$','; echo "${test_result[*]}" ) >> concurrency.csv
 echo "100,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> concurrency_latency.csv
 echo "100,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> concurrency_alloc.csv
+test_all 0 500
+echo "500,"$(IFS=$','; echo "${test_result[*]}" ) >> concurrency.csv
+echo "500,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> concurrency_latency.csv
+echo "500,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> concurrency_alloc.csv
 test_all 0 1000
 echo "1000,"$(IFS=$','; echo "${test_result[*]}" ) >> concurrency.csv
 echo "1000,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> concurrency_latency.csv
 echo "1000,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> concurrency_alloc.csv
-test_all 0 5000
-echo "5000,"$(IFS=$','; echo "${test_result[*]}" ) >> concurrency.csv
-echo "5000,"$(IFS=$','; echo "${test_latency_result[*]}" ) >> concurrency_latency.csv
-echo "5000,"$(IFS=$','; echo "${test_alloc_result[*]}" ) >> concurrency_alloc.csv
 
 
 

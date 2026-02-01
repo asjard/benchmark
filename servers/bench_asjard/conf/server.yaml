@@ -4,5 +4,5 @@ asjard:
       enabled: true
       addresses:
         listen: 127.0.0.1:7030
-      options:
-        writeTimeout: 1s
+      # options:
+      # writeTimeout: 1s

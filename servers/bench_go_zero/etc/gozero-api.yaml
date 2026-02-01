@@ -1,3 +1,25 @@
 Name: go_zero-api
 Host: 127.0.0.1
 Port: 7030
+
+# 1. 生产模式，禁用开发模式下的额外检查
+Mode: pro
+
+# 2. 禁用链路追踪（Benchmark 中非常耗 CPU）
+Telemetry:
+  Name: benchmark
+  Endpoint: "" # 留空或不配置此项
+  Sampler: 0 # 采样率为0
+
+# 3. 日志优化：性能模式下建议关闭或仅输出到控制台
+Log:
+  Mode: "console"
+  Level: "error" # 只打印错误日志，避免 Access Log 产生大量磁盘/内存 I/O
+  KeepDays: 0
+
+# 4. 禁用定时状态统计（避免每分钟打印系统负载日志）
+Stat: false
+
+# 5. 连接与超时优化
+Timeout: 0 # 压测时可设为0禁用请求超时处理，减少 context 管理开销
+MaxConns: 0 # 禁用连接数限制
